@@ -27,7 +27,7 @@
               Фотографии
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a>
               Конкурс
             </a>
@@ -47,75 +47,75 @@
         <h1 class="header-form__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
     </header>
-    <section class="competition-form">
+    <section class="big-form">
       <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
-      <div class="competition-form__wrapper">
-        <p class="competition-form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
+      <div class="big-form__wrapper">
+        <p class="big-form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
           миль на вашу бонусную карту!</p>
         <form class="form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="form__full-name full-name">
+          <fieldset class="form-block">
             <legend class="visually-hidden">Полное имя</legend>
-            <ul class="full-name__list">
-              <li class="full-name__item">
-                <label class="full-name__label" for="surname-field">ФАМИЛИЯ:
-                  <input class="full-name__control" placeholder="Укажите фамилию *" type="text" name="surname"
+            <ul class="form-block__list">
+              <li class="form-block__item">
+                <label class="form-block__label" for="surname-field">ФАМИЛИЯ:
+                  <input class="form-block__input" placeholder="Укажите фамилию *" type="text" name="surname"
                     id="surname-field" required>
                 </label>
               </li>
-              <li class="full-name__item">
-                <label class="full-name__label" for="name-field">ИМЯ:
-                  <input class="full-name__control" placeholder="Введите ваше имя *" type="text" name="name"
+              <li class="form-block__item">
+                <label class="form-block__label" for="name-field">ИМЯ:
+                  <input class="form-block__input" placeholder="Введите ваше имя *" type="text" name="name"
                     id="name-field" required>
                 </label>
               </li>
-              <li class="full-name__item">
-                <label class="full-name__label" for="patronymic-field">ОТЧЕСТВО:
-                  <input class="full-name__control" placeholder="Ну и отчество тоже" type="text" name="patronymic"
+              <li class="form-block__item">
+                <label class="form-block__label" for="patronymic-field">ОТЧЕСТВО:
+                  <input class="form-block__input" placeholder="Ну и отчество тоже" type="text" name="patronymic"
                     id="patronymic-field">
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__achievements achievements">
-            <legend class="achievements__legend">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="achievements__list">
-              <li class="achievements__item">
-                <label class="achievements__lable control">
+          <fieldset class="checkbox">
+            <legend class="checkbox__legend">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="checkbox__list">
+              <li class="checkbox__item">
+                <label class="checkbox__label control">
                   <input class="control__input" type="checkbox" name="selfi-shark" id="selfi-shark-field" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Сделал селфи с акулой</span>
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__lable control">
+              <li class="checkbox__item">
+                <label class="checkbox__label control">
                   <input class="control__input" type="checkbox" name="sunburn" id="sunburn-field" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Обгорел на пляже</span>
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__lable control">
+              <li class="checkbox__item">
+                <label class="checkbox__label control">
                   <input class="control__input" type="checkbox" name="chuck-norris" id="chuck-norris-field">
                   <span class="control__mark"></span>
                   <span class="control__label">Видел Чака Норриса</span>
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__lable control">
+              <li class="checkbox__item">
+                <label class="checkbox__label control">
                   <input class="control__input" type="checkbox" name="souvenirs" id="souvenirs-field">
                   <span class="control__mark"></span>
                   <span class="control__label">Накупил сувениров</span>
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__lable control">
+              <li class="checkbox__item">
+                <label class="checkbox__label control">
                   <input class="control__input" type="checkbox" name="hold-tower" id="hold-tower-field" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Удержал башню</span>
                 </label>
               </li>
-              <li class="achievements__item">
-                <label class="achievements__lable control">
+              <li class="checkbox__item">
+                <label class="checkbox__label control">
                   <input class="control__input" type="checkbox" name="crush-hotel" id="crush-hotel-field">
                   <span class="control__mark"></span>
                   <span class="control__label">Разгромил отель</span>
@@ -123,42 +123,42 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__contacts contacts">
+          <fieldset class="form-block">
             <legend class="visually-hidden">контактная информация</legend>
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <label class="contacts__label" for="phone-field">НОМЕР ТЕЛЕФОНА
-                  <input class="contacts__control" placeholder="Номер, пожалуйста" type="tel" name="phone"
+            <ul class="form-block__list">
+              <li class="form-block__item">
+                <label class="form-block__label" for="phone-field">НОМЕР ТЕЛЕФОНА
+                  <input class="form-block__control" placeholder="Номер, пожалуйста" type="tel" name="phone"
                     id="phone-field">
                 </label>
               </li>
-              <li class="contacts__item">
-                <label class="contacts__label" for="email-field">АДРЕС ПОЧТЫ
-                  <input class="contacts__control" placeholder="Введите почту *" type="email" name="email"
+              <li class="form-block__item">
+                <label class="form-block__label" for="email-field">АДРЕС ПОЧТЫ
+                  <input class="form-block__control" placeholder="Введите почту *" type="email" name="email"
                     id="email-field" required>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__app apps">
-            <legend class="apps__legend">С каким приложением путешествовали?</legend>
-            <ul class="apps__list">
-              <li class="apps__item">
-                <label class="apps__lable control">
+          <fieldset class="radio">
+            <legend class="radio__legend">С каким приложением путешествовали?</legend>
+            <ul class="radio__list">
+              <li class="radio__item">
+                <label class="radio__label control">
                   <input class="control__input" type="radio" name="ios" id="ios-field" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Pink для iOS</span>
                 </label>
               </li>
-              <li class="apps__item">
-                <label class="apps__lable control">
+              <li class="radio__item">
+                <label class="radio__label control">
                   <input class="control__input" type="radio" name="android" id="android-field">
                   <span class="control__mark"></span>
                   <span class="control__label">Pink на Android</span>
                 </label>
               </li>
-              <li class="apps__item">
-                <label class="apps__lable control">
+              <li class="radio__item">
+                <label class="radio__label control">
                   <input class="control__input" type="radio" name="windows" id="windows-field">
                   <span class="control__mark"></span>
                   <span class="control__label">Windows Phone</span>
@@ -166,9 +166,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__emotions emotions">
-            <legend class="emotions__legend">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
-            <textarea class="emotions__textarea" name="comment" id="comment-field" rows="6">
+          <fieldset class="textarea">
+            <legend class="textarea__legend">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
+            <textarea class="textarea__textarea" name="comment" id="comment-field" rows="6">
               Можно прям в красках, не  стесняясь в выражениях
               </textarea>
           </fieldset>
