@@ -8,64 +8,59 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img src="img/pink-white.svg" width="74" height="23" alt="Логотип Пинк">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle button" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
-              Фотографии
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
-              Конкурс
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="#">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main class="page-main-form">
-    <header class="header-inner">
-      <div class="header-inner__wrapper">
-        <h1 class="header-inner__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      </div>
+  <div class="central-container">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="img/pink-white.svg" width="74" height="23" alt="Логотип Пинк">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle button-burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link">
+                Фотографии
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="page-main-inner">
       <header class="header-inner">
         <div class="header-inner__wrapper-title">
           <h1 class="header-inner__title">Фотографии пользователей</h1>
         </div>
-        <div class="header-inner__wrapper-description">
-          <p class="header-inner__description">Взгляните на фотографии, которые выкладывают пользователи!
-            Видите, как не хватает ваших?</p>
-        </div>
       </header>
       <section class="posts">
         <h2 class="visually-hidden">Посты пользователей</h2>
+        <div class="posts__wrapper-description">
+          <p class="posts__description">Взгляните на фотографии, которые выкладывают пользователи!
+            Видите, как не хватает ваших?</p>
+        </div>
         <div class="posts__wrapper">
           <ul class="posts__list">
-            <li class="posts__item">
+            <li class="posts__item posts__item--main">
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Анны</h3>
-                <a class="photo__link" href="#">
+                <a class="photo__link photo__link--main" href="#">
                   <img src="img/catalog/panorama-tablet.jpg" width="320" height="137"
                     alt="Панорамный вид с канатной дороги">
                 </a>
@@ -173,9 +168,8 @@
       <section class="publication">
         <h2 class="visually-hidden">Размещение своего поста</h2>
         <div class="publication__wrapper">
-          <p class="publication__description"> Затмите их всех! Выкладывайте все, что накопилось
+          <p class="publication__description"> Затмите их всех!<br> Выкладывайте все, что накопилось
             в телефоне!</p>
-
           <a class="publication__link" href="#">
             <img src="img/catalog/winter-road-tablet.jpg" width="280" height="374" alt="Зимняя дорога.">
           </a>
@@ -186,9 +180,9 @@
               </button>
             </div>
           </div>
-          <div class="publication__button button">
-            <button class="button__submit" type="submit">Запостить</button>
-            <input class="button__reset" type="reset" value="Отмена">
+          <div class="publication__button-wrapper">
+            <button class="button--post button" type="submit">Запостить</button>
+            <input class="button--cancel button" type="reset" value="Отмена">
           </div>
         </div>
       </section>
@@ -228,7 +222,7 @@
         </div>
       </div>
     </footer>
-
+  </div>
 </body>
 
 </html>

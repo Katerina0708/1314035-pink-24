@@ -14,7 +14,7 @@
         <img class="pink-white" src="img/pink-white.svg" width="74" height="23" alt="Логотип Пинк">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle button" type="button">
+        <button class="main-nav__toggle button-burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
@@ -48,13 +48,13 @@
         <div class="header-inner__wrapper-title">
           <h1 class="header-inner__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
-        <div class="header-inner__wrapper-description">
-        <p class="header-inner__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
-          миль на вашу бонусную карту!</p>
-        </div>
       </header>
       <section class="big-form">
         <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
+        <div class="big-form__wrapper-description">
+          <p class="big-form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
+            миль на вашу бонусную карту!</p>
+        </div>
         <div class="big-form__wrapper">
           <form class="form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form-block">
@@ -132,13 +132,13 @@
               <ul class="form-block__list">
                 <li class="form-block__item">
                   <label class="form-block__label" for="phone-field">НОМЕР ТЕЛЕФОНА
-                    <input class="form-block__control" placeholder="Номер, пожалуйста" type="tel" name="phone"
+                    <input class="form-block__input" placeholder="Номер, пожалуйста" type="tel" name="phone"
                       id="phone-field">
                   </label>
                 </li>
                 <li class="form-block__item">
                   <label class="form-block__label" for="email-field">АДРЕС ПОЧТЫ
-                    <input class="form-block__control" placeholder="Введите почту *" type="email" name="email"
+                    <input class="form-block__input" placeholder="Введите почту *" type="email" name="email"
                       id="email-field" required>
                   </label>
                 </li>
@@ -176,8 +176,10 @@
               Можно прям в красках, не  стесняясь в выражениях
               </textarea>
             </fieldset>
-            <input class="form__submit button" type="submit" value="Отправить форму">
-            <small class="form__legend">* — обязательные поля</small>
+            <div class="submit-wrapper">
+              <input class="form__submit" type="submit" value="Отправить форму">
+              <small class="form__legend">* — обязательные поля</small>
+            </div>
           </form>
         </div>
       </section>
