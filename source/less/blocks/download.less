@@ -7,6 +7,19 @@
 
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+    margin-top: -360px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 300px;
+    margin-top: -360px;
+    padding-left: 130px;
+    background-color: transparent;
+  }
 }
 
 .download__list {
