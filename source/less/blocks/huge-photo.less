@@ -1,5 +1,4 @@
 .huge-photo {
-  width: 320px;
   min-height: 462px;
   margin-top: -66px;
   background-image: url("../img/huge-photo-mobile.jpg");
@@ -8,16 +7,16 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    width: 660px;
     min-height: 729px;
     margin-top: -110px;
+    background-size: 100% auto;
     background-image: url("../img/huge-photo-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
     min-height: 853px;
     margin-top: -110px;
+    background-size: 100% auto;
     background-image: url("../img/huge-photo-desktop.jpg");
   }
 }

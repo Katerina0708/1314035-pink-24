@@ -1,12 +1,19 @@
 .page-header {
   display: flex;
   justify-content: space-between;
-  padding: 21px 20px;
+  padding: 22px 20px;
   background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
-
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 130px;
+  }
 }
 
 .page-header__logo {
@@ -15,6 +22,10 @@
   height: 23px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 246px;
+  }
 }
 
 .pink-white {
