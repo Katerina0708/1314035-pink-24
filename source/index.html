@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Пинк</title>
 </head>
@@ -51,7 +52,7 @@
               Характеристика и скачивание приложения Пинк
             </h2>
             <p class="perfomance__slogan">
-              Взгляните на жизнь иначе!
+              Взгляните<br> на жизнь иначе!
             </p>
           </div>
           <div class="download">
@@ -86,7 +87,7 @@
           <header class="advantages__header">
             <h2 class="visually-hidden">Достоинства Пинк</h2>
             <p class="advantages__slogan">
-              Устали от серости мегаполиса? Нам есть, что вам предложить!
+              Устали от серости мегаполиса? Нам есть, что вам<br> предложить!
             </p>
           </header>
           <ul class="advantages__list">
@@ -109,6 +110,15 @@
           </ul>
         </div>
       </section>
+      <section class="research">
+        <div class="research__wrapper">
+          <h2 class="research__title">Эффект на 24 часа!</h2>
+          <p class="research__description">Британские ученые провели исследования
+            и доказали, что положительный эффект
+            от использования приложения длится целые сутки!</p>
+          <a class="research__link">Узнать больше об исследовании</a>
+        </div>
+      </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы о Пинк</h2>
@@ -116,6 +126,7 @@
             <blockquote class="reviews__item slider__item">
               <div class="reviews__author-info">
                 <cite class="reviews__author-name">Николай Петров</cite>
+                <span class="reviews__age-job">25 лет, водитель трамвая</span>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
                   привычные
                   серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
@@ -135,17 +146,29 @@
         <div class="rates__wrapper slider">
           <h2 class="visually-hidden">Таблица с тарифами</h2>
           <table class="rates__table table">
-            <tr>
-              <th class="table__header">СТАНДАРТ</th>
+            <tr class="table__row">
+              <th class="table__header cell-1">Здесь не будет ячейки</th>
+              <th class="table__header cell-2">БАЗА</th>
+              <th class="table__header cell-3">СТАНДАРТ</th>
+              <th class="table__header cell-4">АНЛИМ</th>
             </tr>
-            <tr>
-              <td class="table__data">Розовый фильтр</td>
+            <tr class="table__row">
+              <td class="table__data cell-5">Розовый фильтр</td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
             </tr>
-            <tr>
-              <td class="table__data">Смайлики</td>
+            <tr class="table__row">
+              <td class="table__data cell-6">Смайлики</td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
             </tr>
-            <tr>
-              <td class="table__data">Комментарии</td>
+            <tr class="table__row">
+              <td class="table__data cell-7">Комментарии</td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
             </tr>
           </table>
           <p class="rates__toggles slider__toggles">
@@ -170,11 +193,12 @@
             <li class="contacts__item item-contacts">
               <h3 class="item-contacts__title">Приезжайте в гости:</h3>
               <p class="item-contacts__text">
-                ул. Большая Конюшенная 19/8</p>
+                ул. Большая<br> Конюшенная 19/8</p>
             </li>
           </ul>
           <div class="contacts__map">
-            <img src="img/map.png" width="320" height="200" alt="Местонахождение Пинк на карте города Санкт-Петербург">
+            <img src="img/map-desktop.png" width="1200" height="502"
+              alt="Местонахождение Пинк на карте города Санкт-Петербург">
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@
   padding: 21px;
   font-family: inherit;
   font-size: 18px;
-  line-height: 13px;
+  line-height: 18px;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -19,6 +19,18 @@
   color: #ffffff;
   outline: 3px solid #ffffff;
   border-radius: 29px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 300px;
+    min-height: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 300px;
+    min-height: 56px;
+    padding: 20px;
+    font-size: 21px;
+  }
 }
 
 .button--post {
