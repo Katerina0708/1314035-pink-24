@@ -2,9 +2,19 @@
   padding-left: 22px;
   padding-bottom: 54px;
   background-color: #f2f2f2;
-
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 46px 22px 65px 22px;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 471px;
+    margin: 0;
+  }
 }
 
 .radio__legend {
@@ -14,6 +24,10 @@
   text-align: center;
   text-transform: uppercase;
   color: #d22856;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .radio__list {

@@ -1,27 +1,58 @@
 .posts__wrapper-description {
   padding: 44px 20px 50px 20px;
   margin-top: -210px;
-  font-size: 14px;
   background-color: #ffffff;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 100px 20px 85px 20px;
+  }
 }
 
 .posts__description {
-  margin: 0;
+  margin: 0 auto;
+  font-size: 14px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 620px;
+    font-size: 18px;
+  }
 }
 
 .posts__wrapper {
-
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }
 
 .posts__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 54px 20px;
+  }
 }
 
 .posts__item:not(:first-child) {
@@ -29,22 +60,56 @@
   margin-left: 20px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .posts__item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.posts__item {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  &--main {
+    grid-column: span 2;
+    margin-bottom: 30px;
+
+    @media (min-width: @desktop-width) {
+      grid-column: span 3;
+      margin-bottom: -4px;
+    }
+  }
 }
 
 .photo__link {
   display: block;
   width: 280px;
   height: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
 
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 
   &--main {
     width: 320px;
     height: 137px;
+    margin-left: -20px;
     padding-left: 0;
+
+    @media (min-width: @desktop-width) {
+      margin-left: -130px;
+    }
   }
 }
 
@@ -60,4 +125,8 @@
 .photo__text:first-of-type {
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }

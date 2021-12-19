@@ -3,6 +3,18 @@
   margin: 0;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 22px 70px 22px;
+    padding: 0;
+    order: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    margin: 0;
+    margin-bottom: 69px;
+  }
 }
 
 .textarea__legend {
@@ -13,6 +25,11 @@
   text-align: center;
   text-transform: uppercase;
   color: #d22856;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .textarea__input {
@@ -27,4 +44,14 @@
   font-weight: 400;
   border: 2px solid #f8f0f0;
   border-radius: 1px;
+
+
+  @media (min-width: @tablet-width) {
+    width: 496px;
+    margin: 42px 60px 53px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 816px;
+  }
 }
