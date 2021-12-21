@@ -1,6 +1,35 @@
+.perfomance {
+  min-height: 462px;
+  margin-top: -66px;
+  background-image: url("../img/huge-photo-mobile.jpg");
+  background-size: 100% auto;
+  background-color: #1d2631;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    min-height: 729px;
+    margin-top: -110px;
+    background-size: 100% auto;
+    background-image: url("../img/huge-photo-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 853px;
+    margin-top: -110px;
+    background-size: 100% auto;
+    background-image: url("../img/huge-photo-desktop.jpg");
+  }
+}
+
 .perfomance__wrapper {
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  margin: auto;
+  max-width: 940px;
+}
+
+.perfomance__column {
+  @media (min-width: @desktop-width) {
+    max-width: 300px;
+  }
 }
 
 .perfomance__slogan {
@@ -13,6 +42,8 @@
   font-weight: 300;
   text-align: center;
   color: #ffffff;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     max-width: 300px;
@@ -23,10 +54,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 300px;
     padding-top: 224px;
     padding-bottom: 51px;
-    padding-left: 130px;
     font-size: 50px;
     line-height: 68px;
   }

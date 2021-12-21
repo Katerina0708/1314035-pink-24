@@ -1,3 +1,9 @@
+.publication {
+  padding: 0 130px;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+}
+
 .publication__wrapper {
   background-color: #f2f2f2;
   outline: 5px solid rgba(255, 99, 78, 0.5);
@@ -9,10 +15,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 57px 60px 57px 80px;
-    margin-left: 130px;
-    margin-right: 130px;
+    max-width: 940px;
+    margin: auto;
     margin-bottom: 28px;
+    padding: 57px 60px 57px 80px;
+    box-sizing: border-box;
   }
 }
 
@@ -44,7 +51,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 67px 389px 75px 389px;
+    max-width: 940px;
+    padding: 67px 80px 75px 80px;
+    box-sizing: border-box;
+    margin: auto;
   }
 }
 
