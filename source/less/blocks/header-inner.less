@@ -1,5 +1,4 @@
 .header-inner__wrapper-title {
-  width: 320px;
   min-height: 462px;
   margin-top: -66px;
   background-image: url("../img/form-photo.jpg");
@@ -8,14 +7,38 @@
   background-repeat: no-repeat;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -110px;
+    background-image: url("../img/form-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -110px;
+    background-image: url("../img/form-desktop.jpg");
+  }
 }
 
 .header-inner__title {
-  margin: 0;
+  max-width: 228px;
+  margin: 0 auto;
   padding: 102px 46px 36px 46px;
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
   text-align: center;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 191px 20px 74px 20px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 747px;
+    padding: 184px 230px 104px 230px;
+  }
 }

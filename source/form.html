@@ -55,31 +55,34 @@
         <div class="big-form__wrapper-description">
           <p class="big-form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000
             миль на вашу бонусную карту!</p>
+          <span class="big-form__note">Пожалуйста, заполните форму ниже:</span>
         </div>
         <div class="big-form__wrapper">
           <form class="form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="form-block">
-              <legend class="visually-hidden">Полное имя</legend>
-              <ul class="form-block__list">
-                <li class="form-block__item">
-                  <label class="form-block__label" for="surname-field">ФАМИЛИЯ:
-                    <input class="form-block__input" placeholder="Укажите фамилию *" type="text" name="surname"
-                      id="surname-field" required>
-                  </label>
-                </li>
-                <li class="form-block__item">
-                  <label class="form-block__label" for="name-field">ИМЯ:
-                    <input class="form-block__input" placeholder="Введите ваше имя *" type="text" name="name"
-                      id="name-field" required>
-                  </label>
-                </li>
-                <li class="form-block__item">
-                  <label class="form-block__label" for="patronymic-field">ОТЧЕСТВО:
-                    <input class="form-block__input" placeholder="Ну и отчество тоже" type="text" name="patronymic"
-                      id="patronymic-field">
-                  </label>
-                </li>
-              </ul>
+              <div class="form-block__wrapper">
+                <legend class="visually-hidden">Полное имя</legend>
+                <ul class="form-block__list">
+                  <li class="form-block__item">
+                    <label class="form-block__label" for="surname-field">ФАМИЛИЯ:
+                      <input class="form-block__input" placeholder="Укажите фамилию *" type="text" name="surname"
+                        id="surname-field" required>
+                    </label>
+                  </li>
+                  <li class="form-block__item">
+                    <label class="form-block__label" for="name-field">ИМЯ:
+                      <input class="form-block__input" placeholder="Введите ваше имя *" type="text" name="name"
+                        id="name-field" required>
+                    </label>
+                  </li>
+                  <li class="form-block__item">
+                    <label class="form-block__label" for="patronymic-field">ОТЧЕСТВО:
+                      <input class="form-block__input" placeholder="Ну и отчество тоже" type="text" name="patronymic"
+                        id="patronymic-field">
+                    </label>
+                  </li>
+                </ul>
+              </div>
             </fieldset>
             <fieldset class="checkbox">
               <legend class="checkbox__legend">Ваши безбашенные достижения в путешествии</legend>
@@ -128,18 +131,18 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form-block">
-              <legend class="visually-hidden">контактная информация</legend>
-              <ul class="form-block__list">
-                <li class="form-block__item">
-                  <label class="form-block__label" for="phone-field">НОМЕР ТЕЛЕФОНА
-                    <input class="form-block__input" placeholder="Номер, пожалуйста" type="tel" name="phone"
+            <fieldset class="form-contacts">
+              <legend class="form-contacts__legend">контактная информация</legend>
+              <ul class="form-contacts__list">
+                <li class="form-contacts__item">
+                  <label class="form-contacts__label" for="phone-field">НОМЕР ТЕЛЕФОНА
+                    <input class="form-contacts__input" placeholder="Номер, пожалуйста" type="tel" name="phone"
                       id="phone-field">
                   </label>
                 </li>
-                <li class="form-block__item">
-                  <label class="form-block__label" for="email-field">АДРЕС ПОЧТЫ
-                    <input class="form-block__input" placeholder="Введите почту *" type="email" name="email"
+                <li class="form-contacts__item">
+                  <label class="form-contacts__label" for="email-field">АДРЕС ПОЧТЫ
+                    <input class="form-contacts__input" placeholder="Введите почту *" type="email" name="email"
                       id="email-field" required>
                   </label>
                 </li>
@@ -179,7 +182,7 @@
             </fieldset>
             <div class="submit-wrapper">
               <input class="form__submit" type="submit" value="Отправить форму">
-              <small class="form__legend">* — обязательные поля</small>
+              <small class="form__legend">* — обязательные <span class="form__span">для заполнения</span> поля</small>
             </div>
           </form>
         </div>

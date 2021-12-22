@@ -38,10 +38,30 @@
   outline: 3px solid #d22856;
   border-radius: 30px;
   color: #d22856;
+
+  @media (min-width: @tablet-width) {
+    min-width: 260px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 183px;
+    margin: 0;
+    margin-right: 44px;
+  }
 }
 
 .button--cancel {
   opacity: 0.1;
   outline: 3px solid #283645;
   border-radius: 30px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 260px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 183px;
+    margin: 0;
+  }
 }

@@ -18,15 +18,49 @@
   outline: 2px solid #2aab6d;
   border-radius: 1px;
   color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .submit-wrapper {
   padding: 52px 22px 26px 22px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 22px;
+    padding-bottom: 50px;
+    order: 6;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2px;
+  }
 }
 
 .form__legend {
+  align-self: center;
   padding-left: 47px;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
+
+  .form__span {
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: inline;
+    }
+  }
 }
