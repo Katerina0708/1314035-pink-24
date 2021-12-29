@@ -1,4 +1,32 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 51px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
 .copyright__text {
+  display: block;
+  margin-right: 15px;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__link:hover path {
+  fill: #283645;
+}
+
+.copyright__link:active path {
+  fill: rgba(40, 54, 69, 0.3);
 }

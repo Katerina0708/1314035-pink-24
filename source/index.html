@@ -10,11 +10,11 @@
 
 <body class="page__body">
   <div class="central-container">
-    <header class="page-header">
+    <header class="page-header page-header--closed page-header--nojs">
       <a class="page-header__logo">
         <img class="pink-white" src="img/pink-white.svg" width="74" height="23" alt="Логотип Пинк"></a>
       <nav class="main-nav">
-        <button class="main-nav__toggle button-burger" type="button">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
@@ -43,6 +43,23 @@
         </div>
       </nav>
     </header>
+    <script>
+      var navMain = document.querySelector('.page-header');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('page-header--nojs');
+
+      navToggle.addEventListener('click', function () {
+        if (navMain.classList.contains('page-header--closed')) {
+          navMain.classList.remove('page-header--closed');
+          navMain.classList.add('page-header--opened');
+        } else {
+          navMain.classList.add('page-header--closed');
+          navMain.classList.remove('page-header--opened');
+        }
+      });
+
+    </script>
     <main class="page-main main-container">
       <h1 class="visually-hidden">Пинк изменит ваш мир</h1>
       <section class="perfomance">
@@ -63,17 +80,34 @@
               </div>
               <ul class="download__list">
                 <li class="download__item">
-                  <a class="download__link" href="https://apps.apple.com">
+                  <a class="download__link download__link--apple" href="https://apps.apple.com">
+                    <svg aria-hidden="true" focusable="false" width="47" height="56" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M39.245 29.74a12.09 12.09 0 0 0 2.127 6.787A12.668 12.668 0 0 0 47 41.063a29.794 29.794 0 0 1-4 7.96c-2.401 3.413-4.905 6.816-8.844 6.904-3.938.09-5.088-2.219-9.526-2.219-4.437 0-5.8 2.15-9.465 2.288-3.663.139-6.686-3.718-9.088-7.111-4.956-6.905-8.752-19.639-3.664-28.2a13.925 13.925 0 0 1 5.024-5.037 14.489 14.489 0 0 1 6.935-1.977c3.724-.069 7.246 2.427 9.526 2.427 2.28 0 6.564-3.009 11.062-2.565 2.084.073 4.121.613 5.954 1.576a13.387 13.387 0 0 1 4.61 3.977c-.275.168-6.31 3.571-6.249 10.653h-.03ZM31.978 8.936C34.16 6.46 35.238 3.247 34.981 0c-3.305.302-6.364 1.82-8.55 4.241-1.862 2.092-3.5 5.445-3.053 8.66 3.247.247 6.555-1.597 8.57-3.945"
+                        fill="#fff" /></svg>
                     <span class="visually-hidden">Эппл</span>
                   </a>
                 </li>
                 <li class="download__item">
-                  <a class="download__link" href="https://play.google.com">
+                  <a class="download__link download__link--android" href="https://play.google.com">
+                    <svg aria-hidden="true" focusable="false" width="43" height="47" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M34.886 14.062H8.114v19.133c-.011.913.332 1.795.96 2.468a3.697 3.697 0 0 0 2.422 1.159v7.453c.044.737.374 1.43.922 1.936a2.986 2.986 0 0 0 2.026.789c.753 0 1.478-.282 2.026-.789.548-.506.878-1.199.922-1.936v-7.433h8.236v7.433c.045.737.375 1.43.922 1.936a2.985 2.985 0 0 0 2.026.789c.754 0 1.478-.282 2.026-.789.548-.506.878-1.199.922-1.936v-7.453a3.707 3.707 0 0 0 2.426-1.158c.63-.673.975-1.555.967-2.468V14.402l-.03-.34ZM2.953 15.745c.78 0 1.53.304 2.081.845.552.54.862 1.275.862 2.04v12.402c.001.38-.074.756-.22 1.107a2.88 2.88 0 0 1-.638.94 2.947 2.947 0 0 1-.956.627 2.995 2.995 0 0 1-3.217-.627A2.866 2.866 0 0 1 0 31.032V18.63c0-.38.076-.756.225-1.107.149-.35.366-.669.64-.937.275-.268.6-.48.959-.625a2.995 2.995 0 0 1 1.13-.216ZM40.057 15.745c.78 0 1.53.304 2.081.845.552.54.862 1.275.862 2.04v12.402c.001.38-.074.756-.221 1.107-.147.351-.364.67-.637.94a2.947 2.947 0 0 1-.956.627 2.994 2.994 0 0 1-3.217-.627 2.867 2.867 0 0 1-.865-2.047V18.63c0-.38.076-.756.225-1.107.148-.35.366-.669.64-.937.275-.268.6-.48.959-.625a2.995 2.995 0 0 1 1.129-.216ZM8.175 12.058h26.568a10.404 10.404 0 0 0-3.26-7.293L34.049.498a.307.307 0 0 0-.122-.461.322.322 0 0 0-.42.11l-2.42 4.157A16.708 16.708 0 0 0 21.458.898a16.977 16.977 0 0 0-9.575 3.406L9.504.187a.325.325 0 0 0-.184-.16.333.333 0 0 0-.246.01.315.315 0 0 0-.112.42l2.493 4.238a10.443 10.443 0 0 0-3.28 7.363Zm17.699-5.21c0-.398.161-.78.449-1.062.287-.281.677-.44 1.083-.44.407 0 .797.159 1.084.44.288.282.45.664.45 1.063 0 .398-.162.78-.45 1.062-.287.282-.677.44-1.084.44-.406 0-.796-.158-1.083-.44a1.488 1.488 0 0 1-.45-1.062Zm-11.384 0c0-.398.162-.78.449-1.062.287-.281.677-.44 1.084-.44.406 0 .796.159 1.084.44.287.282.449.664.449 1.063 0 .398-.162.78-.45 1.062-.287.282-.677.44-1.083.44-.407 0-.797-.158-1.084-.44a1.488 1.488 0 0 1-.449-1.062Z"
+                        fill="#A4C639" /></svg>
                     <span class="visually-hidden">Андроид</span>
                   </a>
                 </li>
                 <li class="download__item">
-                  <a class="download__link" href="https://www.microsoft.com ">
+                  <a class="download__link download__link--microsoft" href="https://www.microsoft.com ">
+                    <svg aria-hidden="true" focusable="false" width="44" height="41" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.908 19.524H0V0h20.908v19.524Z" fill="#F05423" />
+                      <path d="M44 19.524H23.092V0H44v19.524Z" fill="#84C441" />
+                      <path d="M20.908 41H0V21.476h20.908V41Z" fill="#2DABE2" />
+                      <path d="M44 41H23.092V21.476H44V41Z" fill="#F9BC15" />
+                    </svg>
                     <span class="visually-hidden">Майкрософт</span>
                   </a>
                 </li>
@@ -88,9 +122,12 @@
           <header class="advantages__header">
             <h2 class="visually-hidden">Достоинства Пинк</h2>
             <p class="advantages__slogan">
-              Устали от серости мегаполиса? Нам есть, что вам<br> предложить!
+              Устали от серости мегаполиса?
+            </p>
+            <p class="advantages__slogan"> Нам есть, что вам<br> предложить!
             </p>
           </header>
+        </div>
           <div class="advantages__container">
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--mood">
@@ -113,7 +150,7 @@
               </li>
             </ul>
           </div>
-        </div>
+
       </section>
       <section class="research">
         <div class="research__wrapper">
@@ -132,18 +169,38 @@
               <div class="reviews__author-info">
                 <cite class="reviews__author-name">Николай Петров</cite>
                 <span class="reviews__age-job">25 лет, водитель трамвая</span>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-                  привычные
-                  серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                <div class="slider__container">
+                  <button class="slider__button slider__button--prev" type="button">
+                    <svg width="22" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.959 20.497.252 39.585A.822.822 0 0 0 0 40.17a.801.801 0 0 0 .252.585A.86.86 0 0 0 .86 41a.88.88 0 0 0 .608-.245l20.28-19.664a.834.834 0 0 0 .252-.59.811.811 0 0 0-.253-.59L1.468.239A.894.894 0 0 0 .855 0a.878.878 0 0 0-.473.143.838.838 0 0 0-.313.372.81.81 0 0 0 .183.902l19.707 19.08Z"
+                        fill="#283645" />
+                    </svg>
+                    <span class="visually-hidden">Предыдущий отзыв</span>
+                  </button>
+                  <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+                    привычные
+                    серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                  <button class="slider__button slider__button--next" type="button">
+                    <svg width="22" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19.959 20.497.252 39.585A.822.822 0 0 0 0 40.17a.801.801 0 0 0 .252.585A.86.86 0 0 0 .86 41a.88.88 0 0 0 .608-.245l20.28-19.664a.834.834 0 0 0 .252-.59.811.811 0 0 0-.253-.59L1.468.239A.894.894 0 0 0 .855 0a.878.878 0 0 0-.473.143.838.838 0 0 0-.313.372.81.81 0 0 0 .183.902l19.707 19.08Z"
+                        fill="#283645" />
+                    </svg>
+                    <span class="visually-hidden">Следующий отзыв</span>
+                  </button>
+                </div>
               </div>
             </blockquote>
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
           <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle slider__toggle--current" type="button">
+              <span class="visually-hidden">1 отзыв</span>
+            </button>
+            <button class="slider__toggle" type="button">
+              <span class="visually-hidden">2 отзыв</span>
+            </button>
+            <button class="slider__toggle" type="button">
+              <span class="visually-hidden">3 отзыв</span>
+            </button>
           </p>
         </div>
       </section>
@@ -152,34 +209,49 @@
           <h2 class="visually-hidden">Таблица с тарифами</h2>
           <table class="rates__table table">
             <tr class="table__row">
-              <th class="table__header cell-1">Здесь не будет ячейки</th>
-              <th class="table__header cell-2">БАЗА</th>
-              <th class="table__header cell-3">СТАНДАРТ</th>
-              <th class="table__header cell-4">АНЛИМ</th>
+              <th class="table__header table__header--cell-1"></th>
+              <th class="table__header">
+                <span class="table__name">БАЗА</span>
+                <span class="table__price">1,99 USD</span>
+              </th>
+              <th class="table__header table__header--hit">
+                <span class="table__name">СТАНДАРТ</span>
+                <span class="table__price">3,99 USD</span>
+              </th>
+              <th class="table__header">
+                <span class="table__name">АНЛИМ</span>
+                <span class="table__price">9,99 USD</span>
+              </th>
             </tr>
             <tr class="table__row">
-              <td class="table__data cell-5">Розовый фильтр</td>
-              <td class="table__data"></td>
-              <td class="table__data"></td>
-              <td class="table__data"></td>
+              <td class="table__data">Розовый фильтр</td>
+              <td class="table__data table__data--tick"></td>
+              <td class="table__data table__data--tick table__data--cell-5"></td>
+              <td class="table__data table__data--tick"></td>
             </tr>
             <tr class="table__row">
-              <td class="table__data cell-6">Смайлики</td>
-              <td class="table__data"></td>
-              <td class="table__data"></td>
-              <td class="table__data"></td>
+              <td class="table__data">Смайлики</td>
+              <td class="table__data table__data--cross"></td>
+              <td class="table__data table__data--tick table__data--cell-6"></td>
+              <td class="table__data table__data--tick"></td>
             </tr>
             <tr class="table__row">
-              <td class="table__data cell-7">Комментарии</td>
-              <td class="table__data"></td>
-              <td class="table__data"></td>
-              <td class="table__data"></td>
+              <td class="table__data">Комментарии</td>
+              <td class="table__data table__data--cross"></td>
+              <td class="table__data table__data--cross table__data--cell-7"></td>
+              <td class="table__data table__data--tick"></td>
             </tr>
           </table>
           <p class="rates__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle slider__toggle--current" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
+            <button class="slider__toggle slider__toggle--grey" type="button">
+              <span class="visually-hidden">Тариф База.</span>
+            </button>
+            <button class="slider__toggle slider__toggle--current" type="button">
+              <span class="visually-hidden">Тариф Стандарт.</span>
+            </button>
+            <button class="slider__toggle slider__toggle--grey" type="button">
+              <span class="visually-hidden">Тариф Анлим.</span>
+            </button>
           </p>
         </div>
       </section>
@@ -202,8 +274,11 @@
             </li>
           </ul>
           <div class="contacts__map">
-            <img src="img/map-desktop.png" width="1200" height="502"
-              alt="Местонахождение Пинк на карте города Санкт-Петербург">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002646!2d30.320858715473726!3d59.93871916905494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1640352603409!5m2!1sru!2sru"
+              width="320" height="200" style="border: 0;" allowfullscreen="" loading="lazy"
+              title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург.">
+            </iframe>
           </div>
         </div>
       </section>
@@ -211,34 +286,63 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
-          <img class="pink-dark" src="img/pink-dark.svg" width="74" height="23" alt="Логотип Пинк">
+          <svg width="145" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M71.005 18.549c0-.337.13-.66.365-.9.234-.24.552-.379.887-.387h7.133c5.057 0 8.385 2.703 8.385 7.13v.06c0 4.846-4.034 7.358-8.802 7.358h-5.435v6.801a1.282 1.282 0 0 1-.754 1.28 1.27 1.27 0 0 1-1.717-.758 1.282 1.282 0 0 1-.062-.522V18.549Zm8.067 10.968c3.706 0 6.14-1.994 6.14-4.986v-.06c0-3.21-2.395-4.875-5.961-4.875h-5.663v9.881l5.484.04ZM92.594 18.389a1.282 1.282 0 0 1 .754-1.28 1.269 1.269 0 0 1 1.717.758c.056.168.078.346.062.522v20.222a1.28 1.28 0 0 1-.754 1.28 1.27 1.27 0 0 1-1.717-.758 1.282 1.282 0 0 1-.063-.522V18.389ZM101.674 18.419a1.278 1.278 0 0 1 1.252-1.247h.347a1.535 1.535 0 0 1 1.282.738l13.601 17.4V18.36c0-.329.13-.643.361-.875a1.229 1.229 0 0 1 1.742 0c.231.232.361.546.361.874v20.292c.005.154-.021.308-.076.452a1.13 1.13 0 0 1-1.077.725h-.129a1.69 1.69 0 0 1-1.311-.778l-13.909-17.81v17.41a1.257 1.257 0 0 1-1.192 1.247 1.23 1.23 0 0 1-1.212-1.246V18.419h-.04ZM126.938 18.389a1.284 1.284 0 0 1 .755-1.28 1.267 1.267 0 0 1 1.45.306 1.287 1.287 0 0 1 .329.974v12.295l12.756-13.133c.262-.271.617-.432.994-.448.325.012.633.15.86.383.227.234.357.546.362.873a1.28 1.28 0 0 1-.418.897l-7.948 7.898 8.574 10.53c.224.26.348.593.348.937a1.309 1.309 0 0 1-1.341 1.276 1.228 1.228 0 0 1-.994-.578l-8.365-10.46-4.828 4.846v4.886a1.278 1.278 0 0 1-.37.895 1.26 1.26 0 0 1-2.154-.895V18.389h-.01Z"
+              fill="#283645" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="m53.892 6.586 5.038 21.145a1.418 1.418 0 0 1-.22 1.297 1.356 1.356 0 0 1-1.183.535H53.52c-.69 5.812-5.57 10.315-11.489 10.315-5.917 0-10.798-4.503-11.488-10.314h-1.965C27.887 35.442 22.953 40 16.968 40c-5.994 0-10.934-4.573-11.612-10.466H1.45a1.364 1.364 0 0 1-1.154-.536 1.418 1.418 0 0 1-.24-1.267L5.106 6.586C5.455 4.26 7.639 0 13.486 0c.388 0 .76.157 1.034.435.274.279.428.657.428 1.05 0 .395-.154.772-.428 1.051a1.45 1.45 0 0 1-1.034.435c-4.707 0-5.438 3.694-5.497 4.1L3.341 26.602h2.034c.746-5.817 5.652-10.31 11.593-10.31 5.939 0 10.843 4.488 11.593 10.3l1.998.01c.745-5.75 5.598-10.189 11.473-10.189 5.886 0 10.746 4.456 11.477 10.222v-.053h2.137l-4.639-19.51c-.068-.407-.77-4.1-5.497-4.1a1.45 1.45 0 0 1-1.033-.436 1.498 1.498 0 0 1-.428-1.05c0-.394.154-.772.428-1.05A1.45 1.45 0 0 1 45.51 0c5.848 0 8.03 4.259 8.382 6.586Zm-28.22 22.977a9.122 9.122 0 0 0-.022-2.97c-.725-4.195-4.336-7.383-8.681-7.383-4.349 0-7.961 3.192-8.683 7.391a9.114 9.114 0 0 0-.025 2.94c.66 4.273 4.308 7.541 8.707 7.541 4.392 0 8.034-3.257 8.704-7.518Zm24.942 0c.073-.461.112-.934.112-1.417 0-4.868-3.893-8.815-8.694-8.815-4.802 0-8.695 3.947-8.695 8.815 0 .482.039.956.112 1.418.669 4.194 4.257 7.397 8.583 7.397 4.325 0 7.913-3.203 8.582-7.397Z"
+              fill="#D22856" />
+          </svg>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="18" height="14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.564.169A3.675 3.675 0 0 1 13.672.14c.688.196 1.291.59 1.723 1.122.71-.21 1.41-.447 2.131-.656a2.03 2.03 0 0 1-.253.917c-.157.284-.38.533-.653.729.253.026.508-.002.747-.081.24-.08.456-.208.633-.376-.099.414-.3.801-.588 1.131-.287.33-.653.594-1.07.772-.247 6.27-3.367 10.467-10.689 10.296H5.15c-.443 0-4.418-.428-5.149-1.75 1.752.245 3.539-.147 4.984-1.095-1.03-.286-2.852-.447-3.161-2.74.388.133.81.163 1.215.085C1.76 7.705.34 7.039.422 4.993c.398.306.905.462 1.421.438C1.102 5.203-.247 2.31.896.825c1.926 1.723 3.964 3.35 7.59 3.512C8.711 2.205 9.69.777 11.563.169Z"
+                    fill="#D22856" />
+                </svg>
                 <span class="visually-hidden">Мы в Твиттерe</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="9" height="18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.509 3.193H9V0H6.02C2.762.171 1.6 2.271 2.077 5.816H0v3.336h2.076V18h3.945V9.152h2.958V5.816H6.01c-.02-.998-.041-2.29.499-2.623Z"
+                    fill="#D22856" />
+                </svg>
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://youtube.com/c/HTMLAcademyRUS">
+                <svg class="social__icon" aria-hidden="true" focusable="false" width="15" height="13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.834 12.809a1.257 1.257 0 0 1-1.285.03 1.097 1.097 0 0 1-.443-.457.97.97 0 0 1-.092-.603V1.221A.97.97 0 0 1 .106.618C.2.429.355.27.549.16a1.256 1.256 0 0 1 1.285.031l12.4 5.502c1.022.445 1.022 1.169 0 1.614l-12.4 5.502Z"
+                    fill="#D22856" />
+                </svg>
                 <span class="visually-hidden">Мы в Ютубе</span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright">
-          <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано</b>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="visually-hidden">HTML Academy</span>
-            </a>
-          </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg aria-hidden="true" focusable="false" width="27" height="34" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.643.016 13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016Zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256Zm0-11.564-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834Zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237Z"
+                fill="#D22856" />
+            </svg>
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </div>
       </div>
     </footer>
