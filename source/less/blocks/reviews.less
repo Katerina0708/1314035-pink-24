@@ -9,6 +9,18 @@
   padding: 50px 20px 0 20px;
 
   @media (min-width: @desktop-width) {
+    &::before {
+      position: absolute;
+      transform: translate(-50%, -180%);
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     padding: 193px 130px 0 130px;
   }
 }
@@ -79,5 +91,5 @@
 
 .reviews__toggles {
   margin: 0;
-  padding-bottom: 60px;
+  padding: 0;
 }

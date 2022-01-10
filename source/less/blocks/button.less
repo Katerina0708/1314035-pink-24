@@ -1,6 +1,6 @@
 .button {
   display: block;
-  width: 280px;
+  min-width: 280px;
   min-height: 55px;
   padding: 21px;
   font-family: inherit;
@@ -23,7 +23,7 @@
 
   &:hover {
     background: #ffffff;
-    border: 3px solid #ffffff;
+    outline: 3px solid #ffffff;
     box-sizing: border-box;
     box-shadow: 0 5px 7px rgb(1 1 1 / 75%);
     border-radius: 30px;
@@ -32,7 +32,7 @@
 
   &:active {
     background: #ffffff;
-    border: 3px solid #ffffff;
+    outline: 3px solid #ffffff;
     box-sizing: border-box;
     border-radius: 30px;
     color: fade(#d22856, 30%);
@@ -67,6 +67,16 @@
     margin: 0;
     margin-right: 44px;
   }
+
+  &:hover {
+    background-color: #d22856;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: #d22856;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--cancel {
@@ -81,5 +91,15 @@
   @media (min-width: @desktop-width) {
     min-width: 183px;
     margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: #283645;
+    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
   }
 }

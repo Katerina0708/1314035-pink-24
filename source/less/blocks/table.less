@@ -1,11 +1,10 @@
 .table__row {
-  display: flex;
+  display: table-row;
 }
 
 .table__header {
-  display: flex;
-  flex-direction: column;
-  width: 276px;
+  position: relative;
+  display: table-cell;
   height: 94px;
   background-color: #283645;
   border: 2px solid #283645;
@@ -17,9 +16,9 @@
     position: relative;
   }
 
-  &--hit::after {
+  &--hit::before {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 74px;
     height: 74px;
@@ -34,6 +33,32 @@
     }
   }
 
+  &:not(:last-child)::after {
+    position: absolute;
+    right: 0;
+    left: 276px;
+    bottom: 0;
+    width: 2px;
+    height: 98px;
+    background-color: #f2f2f2;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      height: 79px;
+      left: 153px;
+      top: -3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 98px;
+      left: 233px;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 276px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 152px;
     height: 75px;
@@ -46,10 +71,12 @@
 
   &--cell-1 {
     opacity: 0;
+    border: none;
   }
 }
 
 .table__name {
+  display: block;
   font-size: 16px;
   font-weight: 700;
   padding-top: 12px;
@@ -76,7 +103,7 @@
 
 .table__data {
   position: relative;
-  display: block;
+  display: table-cell;
   width: 276px;
   height: 59px;
   font-size: 14px;

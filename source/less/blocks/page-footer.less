@@ -1,3 +1,12 @@
+.page-footer {
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px;
+  }
+}
+
 .page-footer__wrapper {
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
@@ -6,15 +15,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 620px;
-    margin: 0 auto;
+    max-width: 660px;
+    margin: auto;
     padding: 0 20px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     max-width: 940px;
+    margin: auto;
+    box-sizing: border-box;
   }
 }
 
@@ -28,6 +40,11 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 87px;
   }
 }
 
