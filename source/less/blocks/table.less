@@ -1,0 +1,183 @@
+.table__row {
+  display: table-row;
+}
+
+.table__header {
+  position: relative;
+  display: table-cell;
+  height: 94px;
+  background-color: #283645;
+  border: 2px solid #283645;
+  border-radius: 1px 0 0 0;
+  box-sizing: border-box;
+  color: #ffffff;
+
+  &--hit {
+    position: relative;
+  }
+
+  &--hit::before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 74px;
+    height: 74px;
+    background-image: url("../img/hit.svg");
+    background-repeat: no-repeat;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/hit-tablet.svg");
+    }
+  }
+
+  &:not(:last-child)::after {
+    position: absolute;
+    right: 0;
+    left: 276px;
+    bottom: 0;
+    width: 2px;
+    height: 98px;
+    background-color: #f2f2f2;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      height: 79px;
+      left: 153px;
+      top: -3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 98px;
+      left: 233px;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 276px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 152px;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 233px;
+    height: 94px;
+  }
+
+  &--cell-1 {
+    opacity: 0;
+    border: none;
+  }
+}
+
+.table__name {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    padding-top: 15px;
+  }
+}
+
+.table__price {
+  font-size: 18px;
+  font-weight: 300;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.table__data {
+  position: relative;
+  display: table-cell;
+  width: 276px;
+  height: 59px;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 153px;
+    height: 45px;
+    padding: 8px 15px;
+    text-transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 234px;
+    height: 59px;
+    padding: 14px 22px;
+    font-size: 18px;
+  }
+
+  &--tick::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 31px;
+    height: 21px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    content: "";
+
+    @media (max-width: @mobile-width-only) {
+      left: 238px;
+    }
+  }
+
+  &--cross::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27px;
+    height: 27px;
+    background-image: url("../img/cross.svg");
+    background-repeat: no-repeat;
+    content: "";
+
+    @media (max-width: @mobile-width-only) {
+      left: 238px;
+    }
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .table__data--cell-5,
+  .table__data--cell-6,
+  .table__data--cell-7 {
+    position: relative;
+    padding-top: 14px;
+    padding-left: 20px;
+  }
+
+  .table__data--cell-5::before {
+    content: "Розовый фильтр";
+  }
+
+  .table__data--cell-6::before {
+    content: "Смайлики";
+  }
+
+  .table__data--cell-7::before {
+    content: "Комментарии";
+  }
+}

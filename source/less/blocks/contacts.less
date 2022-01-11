@@ -121,10 +121,31 @@
   color: #d22856;
 }
 
+.item-contacts__link:hover {
+  color: #283645;
+  text-decoration-line: underline;
+}
+
+.item-contacts__link:active {
+  color: fade(#283645, 30%);
+  text-decoration: none;
+}
+
 .item-contacts__text {
   margin: 0;
 }
 
-.contacts__map {
-  background-color: rgb(113, 223, 186);
+.contacts__map iframe {
+  display: block;
+  border: none;
+  margin: auto;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
 }

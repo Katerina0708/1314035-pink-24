@@ -1,7 +1,9 @@
 .page-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 22px 20px;
+  align-items: center;
+  padding: 22px 20px 21px 20px;
   background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
   outline: 5px solid rgba(255, 99, 78, 0.5);
@@ -15,6 +17,29 @@
     max-width: 940px;
     margin: auto;
     padding: 27px 130px;
+  }
+}
+
+.page-header--opened {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  background-color: #283645;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
   }
 }
 
@@ -32,4 +57,12 @@
 
 .pink-white {
   display: block;
+}
+
+.page-header--opened .page-header__logo {
+  margin: 23px 0 23px 23px;
+
+  @media (min-width: @tablet-width) {
+    margin: 44px 0 42px 40px;
+  }
 }

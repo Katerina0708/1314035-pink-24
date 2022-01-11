@@ -1,24 +1,35 @@
 .radio {
-  padding-left: 22px;
+  position: relative;
+  margin: 0;
+  padding: 0;
   padding-bottom: 54px;
+  border: none;
   background-color: #f2f2f2;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
+    order: 2;
     padding: 0;
     margin: 46px 22px 65px 22px;
-    order: 2;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    background-color: #ffffff;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 431px;
-    margin-bottom: 69px;
-    padding: 74px 54px;
+    margin: 0;
+    margin-top: 74px;
+    padding: 42px 20px 0 0;
   }
 }
 
 .radio__legend {
+  position: absolute;
+  max-width: 178px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   padding-top: 42px;
   font-size: 14px;
   line-height: 18px;
@@ -27,16 +38,80 @@
   color: #d22856;
 
   @media (min-width: @tablet-width) {
+    position: static;
     padding: 0;
+    max-width: 318px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    max-width: 318px;
+    padding: 0;
+    margin-left: 31px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
 .radio__list {
   margin: 0;
-  padding: 0;
+  padding: 123px 22px 0 22px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 22px 58px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-left: 74px;
+  }
 }
 
 .radio__item:not(:last-child) {
-  margin-bottom: 62px;
+  margin-bottom: 45px;
+}
+
+.radio__name {
+  padding-left: 68px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 59px;
+  }
+}
+
+.radio__mark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  outline: 2px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.radio__input[type="radio"]:checked + .radio__mark::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d22856;
+  content: "";
+}
+
+.radio__control {
+  position: relative;
+}
+
+.radio__control:hover .radio__mark {
+  outline: 2px solid #283645;
+}
+
+.radio__control:active .radio__mark {
+  outline: 2px solid #d22856;
 }

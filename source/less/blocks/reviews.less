@@ -6,9 +6,23 @@
 
 .reviews__item {
   margin: 0;
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 50px 20px 0 20px;
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      position: absolute;
+      transform: translate(-50%, -180%);
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 193px 130px 0 130px;
+  }
 }
 
 .reviews__author-info {
@@ -55,7 +69,7 @@
 }
 
 .reviews__text {
-  margin-top: 31px;
+  margin: 0;
   margin-bottom: 44px;
   font-size: 14px;
 
@@ -68,13 +82,14 @@
 
   @media (min-width: @desktop-width) {
     max-width: 688px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    padding-left: 104px;
+    padding-right: 104px;
+    padding-bottom: 50px;
     font-size: 18px;
   }
 }
 
 .reviews__toggles {
   margin: 0;
-  padding-bottom: 60px;
+  padding: 0;
 }
