@@ -1,21 +1,36 @@
 .header-inner__wrapper-title {
   min-height: 462px;
   margin-top: -66px;
-  background-image: url("../img/form/form-photo.jpg");
+  background-image: url("../img/form/back-mobile.jpg");
   background-size: 100% auto;
   background-color: #1d2631;
   background-repeat: no-repeat;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/form/back-mobile@2x.jpg");
+    background-size: cover;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: -110px;
-    background-image: url("../img/form/form-tablet.jpg");
+    background-image: url("../img/form/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/form/back-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: -110px;
-    background-image: url("../img/form/form-desktop.jpg");
+    background-image: url("../img/form/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/form/back-desktop@2x.jpg");
+      background-size: cover;
+    }
   }
 }
 

@@ -22,7 +22,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    max-width: 620px;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     padding: 57px 20px 54px 20px;
@@ -31,6 +32,7 @@
   @media (min-width: @desktop-width) {
     max-width: 940px;
     margin: auto;
+    margin-bottom: 28px;
     padding: 57px 60px 57px 80px;
     box-sizing: border-box;
   }
@@ -66,6 +68,7 @@
   outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
+    max-width: 100%;
     padding: 73px 119px 78px 119px;
     font-size: 18px;
   }
@@ -80,8 +83,8 @@
 
 .publication__link {
   display: block;
-  width: 280px;
-  height: 374px;
+  max-width: 100%;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 23px;
@@ -89,7 +92,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-right: 47px;
+    margin-right: 49px;
     padding: 0;
   }
 

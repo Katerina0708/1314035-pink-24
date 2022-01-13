@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>HTML Academy: Пинк</title>
 </head>
 
@@ -78,8 +82,14 @@
           <article class="post photo">
             <h3 class="visually-hidden">Пост пользователя Анны</h3>
             <a class="photo__link photo__link--main" href="#">
-              <img src="img/catalog/panorama-mobile.jpg" width="320" height="137"
-                alt="Панорамный вид с канатной дороги">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet@2x.jpg 2x">
+                <img src="img/catalog/panorama-mobile.jpg" srcset="img/catalog/panorama-mobile@2x.jpg 2x"
+                  alt="Панорамный вид с канатной дороги">
+              </picture>
             </a>
             <div class="photo__text photo__text--main">
               <p class="photo__info">
@@ -99,8 +109,14 @@
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Левона</h3>
                 <a class="photo__link" href="#">
-                  <img src="img/catalog/gadget-mobile.jpg" width="280" height="180"
-                    alt="Гаджет, снимающий белую машину вдалеке.">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)"
+                      srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x">
+                    <img src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x"
+                      alt="Гаджет, снимающий белую машину вдалеке.">
+                  </picture>
                 </a>
                 <div class="photo__text">
                   <p class="photo__info">
@@ -116,7 +132,14 @@
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Антона</h3>
                 <a class="photo__link" href="#">
-                  <img src="img/catalog/drums-mobile.jpg" width="280" height="180" alt="Барабанная установка.">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)"
+                      srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x">
+                    <img src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg 2x"
+                      alt="Барабанная установка.">
+                  </picture>
                 </a>
                 <div class="photo__text">
                   <p class="photo__info">
@@ -132,7 +155,14 @@
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Бориса</h3>
                 <a class="photo__link" href="#">
-                  <img src="img/catalog/glass-wall-mobile.jpg" width="280" height="180" alt="Стеклянная стена.">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)"
+                      srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
+                    <img src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg 2x"
+                      alt="Стеклянная стена.">
+                  </picture>
                 </a>
                 <div class="photo__text">
                   <p class="photo__info">
@@ -148,8 +178,14 @@
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Сергея</h3>
                 <a class="photo__link" href="#">
-                  <img src="img/catalog/market-mobile.jpg" width="280" height="180"
-                    alt="Кубанская бахча. Развал арбузов и дынь под оранжевым навесом">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)"
+                      srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-4-tablet@2x.jpg 2x">
+                    <img src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile@2x.jpg 2x"
+                      alt="Кубанская бахча. Развал арбузов и дынь под оранжевым навесом">
+                  </picture>
                 </a>
                 <div class="photo__text">
                   <p class="photo__info">
@@ -165,8 +201,14 @@
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Максима</h3>
                 <a class="photo__link" href="#">
-                  <img src="img/catalog/legs-mobile.jpg" width="280" height="180"
-                    alt="Голые мужские ноги в светло-коричневых ботинках, свисающие с обрыва.">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/catalog/photo-5-desktop.jpg 1x, img/catalog/photo-5-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)"
+                      srcset="img/catalog/photo-5-tablet.jpg 1x, img/catalog/photo-5-tablet@2x.jpg 2x">
+                    <img src="img/catalog/photo-5-mobile.jpg" srcset="img/catalog/photo-5-mobile@2x.jpg 2x"
+                      alt="Голые мужские ноги в светло-коричневых ботинках, свисающие с обрыва.">
+                  </picture>
                 </a>
                 <p class="photo__text">
                   <b class="photo__author-name">Максим</b>
@@ -180,8 +222,14 @@
               <article class="post photo">
                 <h3 class="visually-hidden">Пост пользователя Надежды</h3>
                 <a class="photo__link" href="#">
-                  <img src="img/catalog/plane-mobile.jpg" width="280" height="180"
-                    alt="Крыло самолета на фоне закатного неба.">
+                  <picture>
+                    <source media="(min-width: 1200px)"
+                      srcset="img/catalog/photo-6-desktop.jpg 1x, img/catalog/photo-6-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)"
+                      srcset="img/catalog/photo-6-tablet.jpg 1x, img/catalog/photo-6-tablet@2x.jpg 2x">
+                    <img src="img/catalog/photo-6-mobile.jpg" srcset="img/catalog/photo-6-mobile@2x.jpg 2x"
+                      alt="Крыло самолета на фоне закатного неба.">
+                  </picture>
                 </a>
                 <div class="photo__text">
                   <p class="photo__info">
@@ -202,7 +250,14 @@
           в телефоне!</p>
         <div class="publication__wrapper">
           <a class="publication__link" href="#">
-            <img src="img/catalog/winter-road-mobile.jpg" width="280" height="374" alt="Зимняя дорога.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/catalog/photo-7-desktop.jpg 1x, img/catalog/photo-7-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/catalog/photo-7-tablet.jpg 1x, img/catalog/photo-7-tablet@2x.jpg 2x">
+              <img src="img/catalog/photo-7-mobile.jpg" srcset="img/catalog/photo-7-mobile@2x.jpg 2x"
+                alt="Зимняя дорога.">
+            </picture>
           </a>
           <div class="publication__column">
             <div class="range__wrapper scale">

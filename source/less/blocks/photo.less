@@ -1,22 +1,22 @@
 .photo__link {
   display: block;
-  width: 280px;
-  height: 180px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 100%;
+  height: auto;
 
   @media (min-width: @tablet-width) {
     padding: 0;
   }
 
   &--main {
-    width: 320px;
-    height: 137px;
-    margin-left: -20px;
-    padding-left: 0;
+    max-width: 100%;
+    height: auto;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
 
     @media (min-width: @desktop-width) {
-      margin: auto;
+      margin: 0;
     }
   }
 }
@@ -47,6 +47,16 @@
   font-size: 14px;
   box-sizing: border-box;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 30px 31px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 31px;
+  }
 
   &--main {
     margin-left: 20px;
