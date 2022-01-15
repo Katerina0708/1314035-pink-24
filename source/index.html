@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>HTML Academy: Пинк</title>
 </head>
 
@@ -128,29 +132,47 @@
             </p>
           </header>
         </div>
-          <div class="advantages__container">
-            <ul class="advantages__list">
-              <li class="advantages__item advantages__item--mood">
-                <h3 class="advantages__title">Поднимает настроение</h3>
-                <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально
-                  в
-                  несколько кликов!</p>
-              </li>
-              <li class="advantages__item advantages__item--world">
-                <h3 class="advantages__title">Меняет мир вокруг</h3>
-                <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью,
-                  чтобы
-                  усилить эффект</p>
-              </li>
-              <li class="advantages__item advantages__item--friends">
-                <h3 class="advantages__title">Заводит новых друзей</h3>
-                <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
-                  заводите
-                  новых</p>
-              </li>
-            </ul>
-          </div>
+        <div class="advantages__container">
+                    <picture>
+            <source media="(min-width: 660px) and (max-width: 1200px)"
+              srcset="img/iphone-tablet.png 1x, img/iphone-tablet@2x.png 2x">
+            <img class="advantages__image advantages__image--mobile" src="img/iphone-mobile.png"
+              srcset="img/iphone-mobile@2x.png 2x" alt="Розовый фильтр и смайлик на айфоне">
+          </picture>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item">
+              <picture>
+                <img class="advantages__image advantages__image--first" src="img/iphone-1-desktop.png"
+                  srcset="img/iphone-1-desktop@2x.png 2x" alt="Черно-белое фото на айфоне без фильтров">
+              </picture>
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально
+                в
+                несколько кликов!</p>
+            </li>
+            <li class="advantages__item advantages__item">
+              <picture>
+                <img class="advantages__image advantages__image--second" src="img/iphone-2-desktop.png"
+                  srcset="img/iphone-2-desktop@2x.png 2x" alt="Розовый фильтр на айфоне">
+              </picture>
+              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью,
+                чтобы
+                усилить эффект</p>
+            </li>
+            <li class="advantages__item advantages__item">
+              <picture>
+                <img class="advantages__image advantages__image--third" src="img/iphone-3-desktop.png"
+                  srcset="img/iphone-3-desktop@2x.png 2x" alt="Розовый фильтр и смайлик на айфоне">
+              </picture>
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+                заводите
+                новых</p>
+            </li>
+          </ul>
 
+        </div>
       </section>
       <section class="research">
         <div class="research__wrapper">
@@ -172,7 +194,8 @@
                 <div class="slider__container">
                   <button class="slider__button slider__button--prev" type="button">
                     <svg width="22" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.959 20.497.252 39.585A.822.822 0 0 0 0 40.17a.801.801 0 0 0 .252.585A.86.86 0 0 0 .86 41a.88.88 0 0 0 .608-.245l20.28-19.664a.834.834 0 0 0 .252-.59.811.811 0 0 0-.253-.59L1.468.239A.894.894 0 0 0 .855 0a.878.878 0 0 0-.473.143.838.838 0 0 0-.313.372.81.81 0 0 0 .183.902l19.707 19.08Z"
+                      <path
+                        d="M19.959 20.497.252 39.585A.822.822 0 0 0 0 40.17a.801.801 0 0 0 .252.585A.86.86 0 0 0 .86 41a.88.88 0 0 0 .608-.245l20.28-19.664a.834.834 0 0 0 .252-.59.811.811 0 0 0-.253-.59L1.468.239A.894.894 0 0 0 .855 0a.878.878 0 0 0-.473.143.838.838 0 0 0-.313.372.81.81 0 0 0 .183.902l19.707 19.08Z"
                         fill="#283645" />
                     </svg>
                     <span class="visually-hidden">Предыдущий отзыв</span>
@@ -182,7 +205,8 @@
                     серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                   <button class="slider__button slider__button--next" type="button">
                     <svg width="22" height="41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.959 20.497.252 39.585A.822.822 0 0 0 0 40.17a.801.801 0 0 0 .252.585A.86.86 0 0 0 .86 41a.88.88 0 0 0 .608-.245l20.28-19.664a.834.834 0 0 0 .252-.59.811.811 0 0 0-.253-.59L1.468.239A.894.894 0 0 0 .855 0a.878.878 0 0 0-.473.143.838.838 0 0 0-.313.372.81.81 0 0 0 .183.902l19.707 19.08Z"
+                      <path
+                        d="M19.959 20.497.252 39.585A.822.822 0 0 0 0 40.17a.801.801 0 0 0 .252.585A.86.86 0 0 0 .86 41a.88.88 0 0 0 .608-.245l20.28-19.664a.834.834 0 0 0 .252-.59.811.811 0 0 0-.253-.59L1.468.239A.894.894 0 0 0 .855 0a.878.878 0 0 0-.473.143.838.838 0 0 0-.313.372.81.81 0 0 0 .183.902l19.707 19.08Z"
                         fill="#283645" />
                     </svg>
                     <span class="visually-hidden">Следующий отзыв</span>

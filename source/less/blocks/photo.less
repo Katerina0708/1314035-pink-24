@@ -1,28 +1,40 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .photo__link {
   display: block;
-  width: 280px;
-  height: 180px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 100%;
+  height: auto;
 
   @media (min-width: @tablet-width) {
     padding: 0;
   }
 
   &--main {
-    width: 320px;
-    height: 137px;
-    margin-left: -20px;
-    padding-left: 0;
+    max-width: 100%;
+    height: auto;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
 
     @media (min-width: @desktop-width) {
-      margin: auto;
+      margin: 0;
     }
   }
 }
 
 .photo__info {
   margin: 0;
+
+  &--main {
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
+  }
 }
 
 .photo__time {
@@ -34,6 +46,12 @@
 
 .photo__desc {
   padding-bottom: 17px;
+
+  &--main {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+  }
 }
 
 .photo__text {
@@ -45,14 +63,28 @@
   margin-right: 20px;
   padding: 25px 10px 19px 17px;
   font-size: 14px;
+  line-height: 24px;
   box-sizing: border-box;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    margin: 0;
+    padding: 23px 30px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 31px 23px 27px;
+  }
 
   &--main {
     margin-left: 20px;
     margin-right: 20px;
 
     @media (min-width: @tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
       margin: 0 auto;
       max-width: 620px;
     }
@@ -72,6 +104,19 @@
   text-transform: uppercase;
   color: #d22856;
 
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    padding-left: 0;
+  }
+
+  &--main {
+    @media (min-width: @tablet-width) {
+      order: 2;
+      padding-left: 0;
+      padding-right: 29px;
+    }
+  }
+
   &::before {
     position: absolute;
     top: 6px;
@@ -81,5 +126,15 @@
     background-image: url("../img/catalog/heart.svg");
     background-repeat: no-repeat;
     content: "";
+
+    @media (min-width: @tablet-width) {
+      left: 95%;
+    }
+  }
+}
+
+.photo__like--main::before {
+  @media (min-width: @tablet-width) {
+    left: 90%;
   }
 }
