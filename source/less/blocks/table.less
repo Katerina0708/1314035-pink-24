@@ -36,7 +36,7 @@
   &:not(:last-child)::after {
     position: absolute;
     right: 0;
-    left: 276px;
+    left: 274px;
     bottom: 0;
     width: 2px;
     height: 98px;
@@ -77,9 +77,9 @@
 
 .table__name {
   display: block;
+  margin-top: -13px;
   font-size: 16px;
   font-weight: 700;
-  padding-top: 12px;
 
   @media (min-width: @tablet-width) {
     padding-top: 10px;
@@ -105,11 +105,12 @@
   position: relative;
   display: table-cell;
   width: 276px;
-  height: 59px;
+  height: 63px;
   font-size: 14px;
   font-weight: 400;
   box-sizing: border-box;
   border: 2px solid #e5e5e5;
+  border-radius: 0 0 0 1px;
   background-color: #ffffff;
   text-transform: uppercase;
 
@@ -139,7 +140,7 @@
     content: "";
 
     @media (max-width: @mobile-width-only) {
-      left: 238px;
+      left: 241px;
     }
   }
 
@@ -155,7 +156,7 @@
     content: "";
 
     @media (max-width: @mobile-width-only) {
-      left: 238px;
+      left: 241px;
     }
   }
 }
@@ -165,8 +166,8 @@
   .table__data--cell-6,
   .table__data--cell-7 {
     position: relative;
-    padding-top: 14px;
-    padding-left: 20px;
+    padding-top: 4px;
+    padding-left: 19px;
   }
 
   .table__data--cell-5::before {

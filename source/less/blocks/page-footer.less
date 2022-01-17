@@ -1,16 +1,10 @@
 .page-footer {
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-
   @media (min-width: @desktop-width) {
     padding: 0 130px;
   }
 }
 
 .page-footer__wrapper {
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -43,23 +37,42 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 147px;
+    height: 40px;
     padding-top: 70px;
     padding-bottom: 87px;
   }
 }
 
-.page-footer__logo:hover path {
+
+.logo--mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.logo .logo__word,
+.logo .logo__stars {
+  fill: #283645;
+}
+
+.logo .logo__glasses,
+.logo .logo__star {
   fill: #d22856;
 }
 
-.page-footer__logo:active path:first-of-type {
-  fill: rgba(40, 54, 69, 0.3);
-}
-
-.page-footer__logo:active path:last-of-type {
-  fill: rgba(210, 40, 86, 0.3);
-}
-
+/* &:active {
+    opacity: 0.3;
+  }
+*/
 .page-footer__social {
   margin-bottom: 41px;
 

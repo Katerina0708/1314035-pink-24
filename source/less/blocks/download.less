@@ -1,13 +1,10 @@
 .download {
-  margin-top: 300px;
+  margin-top: 315px;
   padding-top: 28px;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #1d2631;
   text-align: center;
-
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
     max-width: 300px;
@@ -30,12 +27,12 @@
 .download__list {
   display: flex;
   justify-content: space-evenly;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 280px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   list-style-type: none;
 }
 
@@ -43,7 +40,7 @@
   max-width: 280px;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 38px;
+  padding-bottom: 30px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
@@ -57,5 +54,22 @@
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+  }
+}
+
+.download__link {
+  &--apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  &--android {
+    width: 43px;
+    height: 47px;
+  }
+
+  &--microsoft {
+    width: 44px;
+    height: 41px;
   }
 }

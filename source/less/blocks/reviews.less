@@ -1,12 +1,10 @@
 .reviews__wrapper {
   text-align: center;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
 }
 
 .reviews__item {
   margin: 0;
-  padding: 50px 20px 0 20px;
+  padding: 43px 20px 0 20px;
 
   @media (min-width: @desktop-width) {
     &::before {
@@ -32,7 +30,7 @@
 
 .reviews__author-name {
   display: block;
-  margin-bottom: 31px;
+  margin-bottom: 10px;
   font-weight: 700;
   color: #000000;
   font-style: normal;
@@ -70,7 +68,7 @@
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 33px;
   font-size: 14px;
 
   @media (min-width: @tablet-width) {
@@ -90,6 +88,8 @@
 }
 
 .reviews__toggles {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  max-width: 60px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
