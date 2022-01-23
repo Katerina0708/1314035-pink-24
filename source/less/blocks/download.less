@@ -9,6 +9,7 @@
   @media (min-width: @tablet-width) {
     max-width: 300px;
     margin-top: 0;
+    padding-top: 0;
     background-color: transparent;
   }
 
@@ -22,6 +23,14 @@
 
 .download__button-wrapper {
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .download__list {
@@ -34,6 +43,14 @@
   margin: 0 auto;
   margin-bottom: 20px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
+  }
 }
 
 .download__title {

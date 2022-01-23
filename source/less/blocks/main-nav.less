@@ -4,7 +4,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: -10px;
+  top: 0;
   right: 0;
   z-index: 2;
   display: block;
@@ -18,13 +18,13 @@
 .page-header--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -12px;
   right: 0;
   width: 50px;
   height: 4px;
   padding: 0;
   background-color: #ffffff;
-  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+  box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
   border: none;
   border-radius: 1px;
   cursor: pointer;
@@ -41,6 +41,10 @@
     box-shadow:
       0 8px 0 0 fade(#d22856, 30%),
       0 16px 0 0 fade(#d22856, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -4px;
   }
 
   @media (min-width: @desktop-width) {
@@ -63,14 +67,14 @@
 }
 
 .page-header--opened .main-nav__toggle {
-  top: -46px;
-  right: 23px;
+  top: -48px;
+  right: 19px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    width: 23px;
+    width: 26px;
     height: 2px;
     background-color: #ffffff;
   }
@@ -95,8 +99,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: -67px;
-    right: 43px;
+    top: -69px;
+    right: 20px;
   }
 
   @media (min-width: @desktop-width) {
