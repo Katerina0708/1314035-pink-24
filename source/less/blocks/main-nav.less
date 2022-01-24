@@ -1,5 +1,17 @@
 .main-nav {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 100%;
+    margin-top: 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    max-width: 620px;
+    margin-top: 0;
+  }
 }
 
 .main-nav__toggle {
@@ -13,6 +25,11 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    top: -59px;
+    right: 40px;
+  }
 }
 
 .page-header--closed .main-nav__toggle::before {
@@ -44,7 +61,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: -4px;
+    top: 0;
+    right: 0;
   }
 
   @media (min-width: @desktop-width) {

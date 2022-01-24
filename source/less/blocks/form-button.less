@@ -1,0 +1,55 @@
+.form-button {
+  display: block;
+  width: 276px;
+  min-height: 59px;
+  padding: 8px 45px;
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background: #2aab6d;
+  outline: 2px solid #2aab6d;
+  border-radius: 1px;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+    margin: 0;
+  }
+
+  &:hover {
+    background: #1c9b5e;
+    outline: 2px solid #1c9b5e;
+  }
+
+  &:active {
+    background: #1c9b5e;
+    outline: 2px solid #1c9b5e;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background: #e5e5e5;
+    outline: 2px solid #e5e5e5;
+    color: #ffffff;
+  }
+
+  &--modal {
+    @media (min-width: @tablet-width) {
+      margin: 0 auto;
+    }
+  }
+
+  &--success {
+    @media (min-width: @desktop-width) {
+      width: 456px;
+    }
+  }
+}
