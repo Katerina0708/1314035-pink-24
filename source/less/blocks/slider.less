@@ -36,7 +36,6 @@
 .slider__toggle {
   width: 12px;
   height: 12px;
-  margin-right: 19px;
   padding: 0;
   background-color: fade(#283645, 30%);
   border: 3px solid #ffffff;
@@ -52,12 +51,24 @@
   }
 
   &--current {
+    margin-right: 13px;
     background-color: #ffffff;
     border: 3px solid #283645;
   }
 
+  &--second {
+    margin-right: 10px;
+  }
+
   &--grey {
     border: 3px solid #f2f2f2;
+  }
+
+  &--middle {
+    margin-right: 6px;
+    margin-left: 6px;
+    background-color: #ffffff;
+    border: 3px solid #283645;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,5 +79,5 @@
 .slider__container {
   display: flex;
   align-items: center;
-  margin: auto;
+  margin: 0;
 }

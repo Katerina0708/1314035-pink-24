@@ -3,9 +3,11 @@
   background-image: url("../img/table-background-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 10px;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/table-background-table.png");
+    background-position-y: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,20 +16,17 @@
 }
 
 .rates__wrapper {
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-
   @media (max-width: @mobile-width-only) {
     width: 320px;
     margin: 0 auto;
     overflow: hidden;
-    padding-top: 127px;
+    padding-top: 137px;
     padding-bottom: 46px;
   }
 
   @media (min-width: @tablet-width) {
     padding-top: 114px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,7 +38,7 @@
 .rates__table {
   margin: 0 auto;
   margin-left: -530px;
-  padding-bottom: 45px;
+  margin-bottom: 20px;
   border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
