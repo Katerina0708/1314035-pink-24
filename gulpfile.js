@@ -12,6 +12,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import terser from 'gulp-terser';
 import csso from 'postcss-csso';
+/*import manifest from 'webmanifest-loader';*/
 
 // Styles
 
@@ -30,15 +31,23 @@ export const styles = () => {
 
 // HTML
 
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
 
+/*// Manifest
+
+const manifest = () => {
+  return gulp.src('source/manifest.webmanifest')
+  .pipe(manifest())
+    .pipe(gulp.dest('build'));
+}*/
+
 // Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
@@ -46,20 +55,20 @@ export const scripts = () => {
 
 // Images
 
-export const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
@@ -69,12 +78,12 @@ export const createWebp = () => {
 
 // SVG
 
-export const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+const svg = () =>
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
@@ -86,7 +95,7 @@ export const sprite = () => {
 
 // Copy
 
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
@@ -99,13 +108,13 @@ export const copy = (done) => {
 
 // Clean
 
-export const clean = () => {
+const clean = () => {
   return del('build');
 };
 
 // Server
 
-export const server = (done) => {
+const server = (done) => {
   browser.init({
     server: {
       baseDir: 'build'
@@ -119,14 +128,14 @@ export const server = (done) => {
 
 // Reload
 
-export const reload = (done) => {
+const reload = (done) => {
   browser.reload();
   done();
 }
 
 // Watcher
 
-export const watcher = () => {
+const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));

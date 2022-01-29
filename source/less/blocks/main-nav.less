@@ -70,29 +70,17 @@
   }
 }
 
-.page-header--closed .site-list__item {
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
-  }
-}
-
 .page-header--opened .main-nav__toggle {
   top: -48px;
-  right: 19px;
+  right: 33px;
+  width: 24px;
+  height: 24px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    width: 26px;
+    width: 28px;
     height: 2px;
     background-color: #ffffff;
   }
@@ -118,7 +106,6 @@
 
   @media (min-width: @tablet-width) {
     top: -69px;
-    right: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -148,8 +135,4 @@
 .page-header--nojs .main-nav__wrapper {
   position: static;
   min-height: 0;
-}
-
-.page-header--nojs .site-list__item {
-  display: block;
 }
