@@ -160,3 +160,13 @@
 .checkbox__control:active .checkbox__mark {
   outline: 2px solid #d22856;
 }
+
+.checkbox__control:disabled .checkbox__mark {
+  outline: none;
+  background-color: rgb(114, 115, 119);
+}
+
+.checkbox__control:focus .checkbox__mark,
+.checkbox__control:focus-visible .checkbox__mark {
+  outline: 2px solid #d22856;
+}

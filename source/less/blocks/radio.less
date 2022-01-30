@@ -115,3 +115,13 @@
 .radio__control:active .radio__mark {
   outline: 2px solid #d22856;
 }
+
+.radio__control:disabled .radio__mark {
+  outline: none;
+  background-color: rgb(114, 115, 119);
+}
+
+.radio__control:focus .radio__mark,
+.radio__control:focus-visible .radio__mark {
+  outline: 2px solid #d22856;
+}

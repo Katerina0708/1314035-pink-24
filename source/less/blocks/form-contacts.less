@@ -42,6 +42,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -161,11 +162,7 @@
     width: 371px;
   }
 
-  &::-moz-placeholder {
-    color: #283645;
-  }
-
-  &::-webkit-input-placeholder {
+  &::placeholder {
     color: #283645;
   }
 
