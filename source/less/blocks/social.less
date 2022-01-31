@@ -38,8 +38,15 @@
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
+
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid #d22856;
+    border-radius: 50%;
+  }
 }
 
 .social__link:active {
   opacity: 0.3;
 }
+
