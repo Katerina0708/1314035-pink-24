@@ -36,7 +36,7 @@
 .download__list {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
   max-width: 280px;
   padding: 0;
@@ -88,5 +88,10 @@
   &--microsoft {
     width: 44px;
     height: 41px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid #d22856;
   }
 }

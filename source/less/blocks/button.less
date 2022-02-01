@@ -13,10 +13,17 @@
   cursor: pointer;
   box-sizing: border-box;
   background-color: transparent;
+
+  &:focus,
+  &:focus-visible {
+    background-color: #d22856;
+    color: #ffffff;
+  }
 }
 
 .button--download {
   margin: auto;
+  margin-bottom: 11px;
   padding: 18px;
   color: #ffffff;
   outline: 3px solid #ffffff;
@@ -109,5 +116,12 @@
     background-color: #283645;
     opacity: 0.3;
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: #d22856;
+    color: #ffffff;
+    opacity: 1;
   }
 }

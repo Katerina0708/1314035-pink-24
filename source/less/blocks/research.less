@@ -26,7 +26,7 @@
   @media (min-width: @desktop-width) {
     max-width: 940px;
     margin: auto;
-    padding: 121px 60px 111px 369px;
+    padding: 121px 20px 111px 369px;
     background-image: url("../img/24-desktop.svg");
     background-size: 298px 345px;
     background-position: 0 30px;
@@ -49,14 +49,7 @@
     margin-bottom: 27px;
     line-height: 30px;
   }
-
-  @media (min-width: @desktop-width) {
-    br {
-      display: none;
-    }
-  }
 }
-
 
 .research__description {
   margin: 0;
@@ -69,7 +62,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 534px;
+    max-width: 515px;
     margin-bottom: 30px;
     font-size: 18px;
     line-height: 30px;
@@ -85,6 +78,7 @@
 .research__link {
   color: #d22856;
   text-decoration: underline;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
@@ -94,5 +88,18 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  &:hover {
+    color: #283645;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 1);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 2px solid #d22856;
   }
 }

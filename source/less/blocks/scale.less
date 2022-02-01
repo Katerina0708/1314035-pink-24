@@ -69,9 +69,13 @@
   }
 }
 
-.scale__input::-webkit-slider-thumb {
+.scale__input::-webkit-slider-thumb,
+.scale__input::-webkit-scrollbar-button,
+.scale__input::-webkit-outer-spin-button,
+.scale__input::-webkit-inner-spin-button {
   appearance: none;
 }
+
 
 .scale__toggle {
   position: absolute;
@@ -110,7 +114,7 @@
 
     @media (min-width: @tablet-width) {
       display: block;
-      top: 71px;
+      top: 69px;
       left: 11%;
     }
 
