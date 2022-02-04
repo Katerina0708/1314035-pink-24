@@ -12,7 +12,6 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import terser from 'gulp-terser';
 import csso from 'postcss-csso';
-/*import manifest from 'webmanifest-loader';*/
 
 // Styles
 
@@ -36,14 +35,6 @@ const html = () => {
   .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
-
-/*// Manifest
-
-const manifest = () => {
-  return gulp.src('source/manifest.webmanifest')
-  .pipe(manifest())
-    .pipe(gulp.dest('build'));
-}*/
 
 // Scripts
 

@@ -9,7 +9,12 @@
 
   @media (min-width: @tablet-width) {
     align-items: center;
+    width: 172px;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 166px;
   }
 }
 
@@ -30,6 +35,10 @@
   &:active {
     outline: 3px solid rgba(40, 54, 69, 0.1);
   }
+
+  &:nth-of-type(n+4) {
+    margin-top: 11px;
+  }
 }
 
 .social__link {
@@ -41,11 +50,15 @@
 
   &:focus,
   &:focus-visible {
-    outline: 2px solid #d22856;
+    outline: 3px solid rgba(40, 54, 69, 0.1);
     border-radius: 50%;
   }
 }
 
 .social__link:active {
   opacity: 0.3;
+}
+
+.social__icon {
+  fill: #d22856;
 }

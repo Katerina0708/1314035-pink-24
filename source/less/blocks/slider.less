@@ -3,6 +3,7 @@
   border: none;
   cursor: pointer;
   background-color: #ffffff;
+  fill: rgba(40, 54, 69, 0.3);
 
   @media (max-width: @mobile-width-only) {
     display: none;
@@ -16,26 +17,23 @@
     display: block;
   }
 
-  &--prev {
-    transform: rotate(180deg);
+
+  &:hover {
+    fill: fade(#283645, 60%);
+  }
+
+  &:active {
+    fill: fade(#283645, 10%);
   }
 
   &:focus,
   &:focus-visible {
     outline: 2px solid #d22856;
   }
-}
 
-.slider__button path {
-  fill: rgba(40, 54, 69, 0.3);
-}
-
-.slider__button:hover path {
-  fill: fade(#283645, 60%);
-}
-
-.slider__button:active path {
-  fill: fade(#283645, 10%);
+  &--prev {
+    transform: rotate(180deg);
+  }
 }
 
 .slider__toggle {

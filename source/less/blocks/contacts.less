@@ -170,6 +170,36 @@
   margin: 0;
 }
 
+.contacts__map {
+  min-height: 200px;
+  background-image: url("../img/map.png");
+  background-size: 100% auto;
+  background-color: #c6e2a1;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 374px;
+    background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 502px;
+    background-image: url("../img/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
+  }
+}
+
 .contacts__map iframe {
   display: block;
   border: none;

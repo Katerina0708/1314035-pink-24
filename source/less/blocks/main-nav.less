@@ -16,7 +16,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
+  top: -24px;
   right: 0;
   z-index: 2;
   display: block;
@@ -27,100 +27,13 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    top: -59px;
+    top: -25px;
     right: 40px;
   }
 
   &:focus,
   &:focus-visible {
     outline: 2px solid #d22856;
-  }
-}
-
-.page-header--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  right: 0;
-  width: 50px;
-  height: 4px;
-  padding: 0;
-  background-color: #ffffff;
-  box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
-  border: none;
-  border-radius: 1px;
-  cursor: pointer;
-
-  &:hover::before {
-    background-color: #d22856;
-    box-shadow:
-      0 8px 0 0 #d22856,
-      0 16px 0 0 #d22856;
-  }
-
-  &:active::before {
-    background-color: fade(#d22856, 30%);
-    box-shadow:
-      0 8px 0 0 fade(#d22856, 30%),
-      0 16px 0 0 fade(#d22856, 30%);
-  }
-
-  @media (min-width: @tablet-width) {
-    top: 0;
-    right: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-header--opened .main-nav__toggle {
-  top: -48px;
-  right: 33px;
-  width: 24px;
-  height: 24px;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background-color: #ffffff;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: #d22856;
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: fade(#d22856, 30%);
-  }
-
-  @media (min-width: @tablet-width) {
-    top: -69px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-header--closed .main-nav__wrapper {
-  @media (min-width: @desktop-width) {
-    position: static;
   }
 }
 
@@ -131,13 +44,4 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
-}
-
-.page-header--nojs .main-nav__toggle {
-  display: none;
-}
-
-.page-header--nojs .main-nav__wrapper {
-  position: static;
-  min-height: 0;
 }

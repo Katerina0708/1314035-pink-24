@@ -95,11 +95,13 @@
 
 .range__icon {
   @media (min-width: @tablet-width) {
+    position: absolute;
     transform: scale(0.5);
     fill: #d22856;
   }
 
   @media (min-width: @desktop-width) {
+    position: static;
     transform: scale(1);
   }
 
@@ -115,5 +117,25 @@
 
   &:active {
     fill: #d22856;
+  }
+
+  &--crop {
+    @media (min-width: @tablet-width) {
+      top: -5px;
+      left: -8px;
+    }
+  }
+
+  &--fill {
+    @media (min-width: @tablet-width) {
+      top: 71px;
+      left: -11px;
+    }
+  }
+
+  &--contrast {
+    @media (min-width: @tablet-width) {
+      position: static;
+    }
   }
 }
